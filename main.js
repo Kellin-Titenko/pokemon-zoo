@@ -1,6 +1,8 @@
 const navElement = document.querySelector("nav");
 const textElement = document.querySelector(".text_element");
 const navliElements = document.querySelectorAll("nav li");
+var videos = document.getElementsByClassName('video');
+var currentVideoIndex = 0;
 
 window.addEventListener("scroll",function(){
     if (window.scrollY > 200) {
