@@ -1,0 +1,398 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0px solid black;
+    font-family: 'Poppins', sans-serif;
+    color: #192A3E;
+
+}
+
+.main_pokemon{
+    background-color: #F1FAF5;
+}
+
+.text_element_info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #291A2E;
+    background-color: #D3C3DC;
+    font-family: 'Bangers', cursive;
+}
+
+.text_element_pokimon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #291A2E;
+    font-family: 'Bangers', cursive;
+}
+
+
+
+html,
+body {
+    height: 100%;
+    background-color: #D3C3DC;
+}
+
+.top_bar {
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.buttom_bar {
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    -moz-box-shadow:0px 0px 10px #FFFEDF;
+    -webkit-box-shadow: 0px 0px 10px #FFFEDF;
+    box-shadow: 0px 0px 10px #FFFEDF;
+}
+
+.buttom_bar_pokemon{
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    -moz-box-shadow:0px 0px 10px #FFFEDF;
+    -webkit-box-shadow: 0px 0px 10px #FFFEDF;
+    box-shadow: 0px 0px 10px #FFFEDF;
+ 
+}
+
+.main_body {
+    height: 93%;
+    display: flex;
+    flex-direction: column;
+}
+
+.main {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.top_body_pic {
+    height: 550px;
+    background: url('./img/roket_team.jpg') no-repeat center;
+    background-size: cover;
+     -moz-box-shadow:0px 0px 10px #FFFEDF;
+    -webkit-box-shadow: 0px 0px 10px #FFFEDF;
+    box-shadow: 0px 0px 10px #FFFEDF;
+    max-height: 600px;
+}
+
+.top_body_pic_pokemon{
+    height: 550px;
+    background: url('./img/all_of_them.png') no-repeat center;
+    background-size: cover;
+     -moz-box-shadow:0px 0px 10px #FFFEDF;
+    -webkit-box-shadow: 0px 0px 10px #FFFEDF;
+    box-shadow: 0px 0px 10px #FFFEDF;
+    max-height: 600px;
+}
+
+.title_body {
+    height: 60px;
+    font-size: 30px;
+    justify-content: start;
+    padding-left: 7%;
+    -moz-box-shadow:0px 0px 10px #FFFEDF;
+    -webkit-box-shadow: 0px 0px 10px #FFFEDF;
+    box-shadow: 0px 0px 10px #FFFEDF;
+}
+
+.info {
+    height: 60%;
+}
+
+.nav_bar_buttns_contenir {
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+}
+
+.nav_bar_title {
+    width: 50%;
+    font-size: 40px;
+    -moz-box-shadow:0px 0px 10px #FFFEDF;
+    -webkit-box-shadow: 0px 0px 10px #FFFEDF;
+    box-shadow: 0px 0px 10px #FFFEDF;
+}
+
+
+.nav_bar_buttn {
+    font-size: 30px;
+    width: 20%;
+    -moz-box-shadow:0px 0px 10px #FFFEDF;
+    -webkit-box-shadow: 0px 0px 10px #FFFEDF;
+    box-shadow: 0px 0px 10px #FFFEDF;
+}
+
+.nav_bar_buttn_pokemon{
+    font-size: 30px;
+    width: 20%;
+    -moz-box-shadow:0px 0px 10px #FFFEDF;
+    -webkit-box-shadow: 0px 0px 10px #FFFEDF;
+    box-shadow: 0px 0px 10px #FFFEDF;
+    background-color: #F1FAF5;
+}
+
+.nav_bar_title {
+    width: 50%;
+}
+
+.footer{
+    font-size: 30px;
+}
+
+.info{
+    display: flex;
+    flex-direction: row;
+    min-height: 331px;
+}
+
+.info_contenir{
+    width: 50%;
+    border: 0px solid black;
+}
+
+.info_contenir_right{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+ 
+.map{
+   
+    background: url('./img/map.jpg') no-repeat center;
+    background-size: cover;
+    background-position: center;
+    width: 311px;
+    height: 311px;
+    -moz-box-shadow:0px 0px 10px #FFFEDF;
+    -webkit-box-shadow: 0px 0px 10px #FFFEDF;
+    box-shadow: 0px 0px 10px #FFFEDF;
+}
+    
+
+
+.h2_info{
+    margin-bottom: 10px;
+    margin-top: 50px;
+    font-weight: lighter;
+    font-size: 30px;
+}
+
+.div_info{
+    margin-bottom: 5px;
+}
+
