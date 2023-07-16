@@ -10,6 +10,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Open+Sans:wght@300&display=swap"
         rel="stylesheet">
+
+    <title>Swiper demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
+
+
 </head>
 
 <body>
@@ -28,7 +36,66 @@
             <div class="top_body_pic_pokemon"></div>
             <div class="title_body text_element_pokimon">Welcom!</div>
             <div class="info">
-                
+                <div class="top_info_container">
+                    <div class="info_text_pokemons">
+                        <h2>let's meet some of the cute Pokemons that live with us: </h2>
+                    </div>
+                    <div class="swiper mySwiper container container_swiper">
+                        <div class="swiper-wrapper content">
+                            <div class="swiper-slide card">
+                                <div class="card_img">
+                                    <img class="poke_img"
+                                        src="https://static-7.studiobebop.net/pokemon_data/card_images/Charmander__18_149__Boundaries_Crossed.jpg"
+                                        alt="Charmander" width="300" height="450">
+                                </div>
+                            </div>
+                            <div class="swiper-slide card">
+                                <div class="card_img">
+                                    <img class="poke_img"
+                                        src="https://static-7.studiobebop.net/pokemon_data/card_images/Squirtle__29_149__Boundaries_Crossed.jpg"
+                                        alt="Charmander" width="300" height="450">
+                                </div>
+                            </div>
+                            <div class="swiper-slide card">
+                                <div class="card_img">
+                                    <img class="poke_img"
+                                        src="https://tcg.pokemon.com/assets/img/expansions/vivid-voltage/cards/en-us/SWSH4_EN_130-2x.jpg"
+                                        alt="Charmander" width="300" height="450">
+                                </div>
+                            </div>
+                            <div class="swiper-slide card">
+                                <div class="card_img">
+                                    <img class="poke_img"
+                                        src="https://static-7.studiobebop.net/pokemon_data/card_images/Bulbasaur__39_95__EX_Team_Magma_vs_Team_Aqua.jpg"
+                                        alt="Charmander" width="300" height="450">
+                                </div>
+                            </div>
+                            <div class="swiper-slide card">
+                                <div class="card_img">
+                                    <img class="poke_img"
+                                        src="https://static-7.studiobebop.net/pokemon_data/card_images/Pikachu__50_149__Boundaries_Crossed.jpg"
+                                        alt="Charmander" width="300" height="450">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="top_info_container">
+                    <div class="search_left">
+                        <div class="search_text">search for your pokemon to see if we got it</div>
+                    </div>
+                    <div class="search_right">
+                        <div class="search_display"> 
+                            <div class="search_box">
+                                <input id="pokemon_name" type="text" placeholder="Pokemon Name">
+                                <button id="search">🔍</button>
+                            </div>
+                            <div class="pokemon_box">
+                               
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="buttom_bar_pokemon">
                 <div class="text_element_pokimon footer">PREPARE FOR TROUBLE! MAKE IT DOUBLE! </div>
@@ -36,6 +103,13 @@
             </div>
         </div>
         <script src="./pkemon.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+        <script>
+            var swiper = new Swiper(".mySwiper", {
+                effect: "cards",
+                grabCursor: true,
+            });
+        </script>
 </body>
 
 </html>
