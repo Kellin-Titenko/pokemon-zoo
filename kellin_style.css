@@ -426,6 +426,7 @@ body {
 
 .container_swiper{
     height: 500px;
+    height: fit-content;
 }
 
 /**    import poke card_poke **/
