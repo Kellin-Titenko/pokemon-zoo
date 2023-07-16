@@ -1,0 +1,109 @@
+{
+    "sentences": [
+      {
+        "tag": "greeting",
+        "patterns": [
+          "Hi",
+          "Hey",
+          "How are you",
+          "Is anyone there?",
+          "Hello",
+          "Good day"
+        ],
+        "responses": [
+          "Hey :-)",
+          "Hello, thanks for visiting",
+          "Hi there, what can I do for you?",
+          "Hi there, how can I help?",
+          "What do you want, can't you see I'm busy",
+          "We are closed!"
+        ]
+      },
+      {
+        "tag": "goodbye",
+        "patterns": ["Bye", "See you later", "Goodbye"],
+        "responses": [
+          "See you later, thanks for visiting",
+          "Have a nice day",
+          "Bye! Come back again soon."
+        ]
+      },
+      {
+        "tag": "thanks",
+        "patterns": ["Thanks", "Thank you", "That's helpful", "Thank's a lot!"],
+        "responses": ["Happy to help!", "Any time!", "Next time bring all the mishpucha"]
+      },
+      {
+        "tag": "items",
+        "patterns": [
+          "Which items do you have?",
+          "What kinds of items are there?",
+          "What do you sell?"
+        ],
+        "responses": [
+          "We are in the buissnes of exotic pokemon trade, its very ilegal",
+          "We also have pokemon cookbook",
+          "We have a sale on picachus"
+        ]
+      },
+      {
+        "tag": "payments",
+        "patterns": [
+          "Do you take credit cards?",
+          "Do you accept Mastercard?",
+          "Can I pay with Paypal?",
+          "Are you cash only?"
+        ],
+        "responses": [
+          "We accept VISA, Mastercard and Paypal",
+          "We accept most major credit cards, and Paypal",
+          "We can accept as well cash under the table"
+        ]
+      },
+      {
+        "tag": "delivery",
+        "patterns": [
+          "How long does delivery take?",
+          "How long does shipping take?",
+          "When do I get my delivery?"
+        ],
+        "responses": [
+          "Delivery takes 3-4 Weeks",
+          "Shipping takes 3-4 Weeks",
+           "If you pay extra I'll fly tommorow"
+        ]
+      },
+      {
+        "tag": "funny",
+        "patterns": [
+          "Tell me a joke!",
+          "Tell me something funny!",
+          "Do you know a joke?"
+        ],
+        "responses": [
+          "Why did the hipster burn his mouth? He drank the coffee before it was cool.",
+          "What did the buffalo say when his son left for college? Bison.",
+          "Which Pokemon does Dracula like most?, Koffin’",
+          "What type of Pokemon are Jimi Hendrix, Janis Joplin and Elvis be?, Legendary Pokemon.",
+          "Why can’t you blindfold a Pokemon?, Because it’s going to Pikachu!",
+          "What do you call a scout that likes to chew gum while climbing Pikes Peak?, A Peak-A-Chewer!",
+          "What do you call a Pikachu that can fix computers?, Geek-achu.",
+          "Which sci-fi movie do Pokémon like the most?, Staryu Wars."
+        ]
+      },
+      {
+        "tag": "Name",
+        "patterns": [
+          "What is your name?",
+          "Can you tell me your name?",
+          "What do they call you?"
+        ],
+        "responses": [
+          "My name is Meowth!, And what is your?",
+          "Not your buissnes!"
+         
+        ]
+      }
+    ]
+  }
+  
