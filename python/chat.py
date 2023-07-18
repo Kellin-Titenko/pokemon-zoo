@@ -5,10 +5,10 @@ from model import NeuralNet
 from Mynltk import bag_of_words,tokenize
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-with open("./sentences.json",'r') as f:
+with open(r"python/sentences.json",'r') as f:
     sentences = json.load(f)
 
-FILE = "data.pth"
+FILE = r"python/data.pth"
 data = torch.load(FILE)
 
 input_size = data["input_size"]

@@ -6,7 +6,7 @@ import torch.nn as nn
 from torch.utils.data import Dataset, DataLoader
 from model import NeuralNet
 
-with open("./sentences.json",'r') as f:
+with open("python/sentences.json",'r') as f:
     sentences = json.load(f)
 
 
