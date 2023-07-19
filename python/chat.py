@@ -5,10 +5,10 @@ from model import NeuralNet
 from Mynltk import bag_of_words,tokenize
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-with open("./sentences.json",'r') as f:
+with open(r"python/sentences.json",'r') as f:
     sentences = json.load(f)
 
-FILE = "data.pth"
+FILE = r"python/data.pth"
 data = torch.load(FILE)
 
 input_size = data["input_size"]
@@ -23,14 +23,8 @@ model = NeuralNet(input_size, hidden_size, output_size).to(device)
 model.load_state_dict(model_state)
 model.eval()
 
-bot_name = "Meowth "
-print("Let's chat! (type 'quit' to exit)")
-while True:
-    # sentence = "do you use credit cards?"
-    sentence = input("You: ")
-    if sentence == "quit":
-        break
-
+bot_name = "Meowth"
+def get_response(sentence):
     sentence = tokenize(sentence)
     X = bag_of_words(sentence, all_words)
     X = X.reshape(1, X.shape[0])
@@ -46,6 +40,18 @@ while True:
     if prob.item() > 0.75:
         for sentence in sentences['sentences']:
             if tag == sentence["tag"]:
-                print(f"{bot_name}: {random.choice(sentence['responses'])}")
+                return (f" {random.choice(sentence['responses'])}")
     else:
-        print(f"{bot_name}: I do not understand...")
+        return (f" I do not understand...")
+
+
+if __name__ == "__main__":
+    print("Let's chat! (type 'quit' to exit)")
+    while True:
+        # sentence = "do you use credit cards?"
+        sentence = input("You: ")
+        if sentence == "quit":
+            break
+
+        resp = get_response(sentence)
+        print(resp)
