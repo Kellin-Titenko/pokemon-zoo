@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
 
 
     <meta charset="UTF-8">
@@ -21,16 +21,16 @@
                 <div class="text_element nav_bar_title z-text"><a id="logo" href="mainNir.html">Team Rocket Zoo</a>
                 </div>
                 <ul class="nav_bar_buttns_contenir">
-                    <li class= "z-text"><a href="{{ url_for('info') }}">info</a></li>
-                    <li class="z-text"><a href="../pokemon_kellin.html">Pokemons</a></li>
-                    <li class="z-text"><a href="#">Mini games</a></li>
+                    <li class= "z-text"><a href="./info.html">info</a></li>
+                    <li class="z-text"><a href="./pokemon_kellin.html">Pokemons</a></li>
+                    <li class="z-text"><a href="./mini_games.html">Mini games</a></li>
                     <li class="z-text"><a href="#">Join us!</a></li>
                     <li class="z-text"><a href="#">Pica bot</a></li>
                 </ul>
             </nav>
             <div class="video_container">
                 
-                <video id="myVideo" autoplay muted loop><source src="{{url_for('static', filename='videos/Pichu.mp4')}}" type="video/mp4"></video>
+                <video id="myVideo" autoplay muted loop><source src="./videos/Pichu.mp4" type="video/mp4"></video>
             </div> 
         </div> 
         </div>
@@ -69,13 +69,13 @@
                     </div>
                 </div>
                 <div class="chatbox__button">
-                    <button><img src="{{url_for('static', filename='images/chatbox-icon.svg')}}" /></button>
+                    <button><img src="./img/chatbox-icon.svg" /></button>
                 </div>
             </div>
         </div>
     
-        <script> const $SCRIPT_ROOT = '{{ url_for("index", _external=True) }}';;</script>
-        <script src="{{url_for('static', filename='js/main.js')}}"></script>
+        <!-- <script> const $SCRIPT_ROOT = '{{ url_for("index", _external=True) }}';;</script> -->
+        <script src="./js/main.js"></script>
         
 </body>
 

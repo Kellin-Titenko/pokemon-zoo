@@ -3,20 +3,8 @@ from flask_cors import CORS
 from chat import get_response
 from flask import jsonify
 
-app = Flask(__name__, template_folder="../templates", static_folder="../static")
+app = Flask(__name__)
 CORS(app)
-
-@app.route("/", methods=["GET"])
-def index():
-    return render_template("mainNir.html")
-
-@app.route("/info")
-def info():
-    return render_template("info.html")
-
-@app.route("/pokemon_kellin")
-def pokemon_kellin():
-    return render_template("pokemon_kellin.html")
 
 
 @app.route("/predict", methods=["POST"])
@@ -37,4 +25,4 @@ def predict():
     return jsonify(message)
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=True, port=8080)
