@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" href="./css/kellin_style.css" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/kellin_style.css') }}" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
@@ -15,7 +15,7 @@
 <body>
     <div class="main">
         <div class="top_bar">
-            <div class="text_element_info nav_bar_title"><a href="./mainNir.html">Team Rocket Zoo</a></div>
+            <div class="text_element_info nav_bar_title"><a href="{{ url_for('mainNir') }}">Team Rocket Zoo</a></div>
             <div class="nav_bar_buttns_contenir">
                 <button id="info_butten" class="text_element_info nav_bar_buttn">Info</button>
                 <button id="pokemons_butten" class="nav_bar_buttn text_element_info">Pokemons</button>
@@ -48,7 +48,7 @@
             </div>
         </div>
 
-        <script src="./js/info.js"></script>
+        <script src="{{url_for('static', filename='js/info.js')}}"></script>
 </body>
 
 </html>

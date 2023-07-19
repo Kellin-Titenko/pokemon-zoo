@@ -95,7 +95,8 @@ body {
 
 .top_body_pic {
     height: 550px;
-    background: url('../img/roket_team.jpg') no-repeat center;
+    background: url('../images/roket_team.jpg') 
+    no-repeat center;
     background-size: cover;
      -moz-box-shadow:0px 0px 10px #FFFEDF;
     -webkit-box-shadow: 0px 0px 10px #FFFEDF;
