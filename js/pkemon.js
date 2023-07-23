@@ -50,6 +50,9 @@ function getPokemon() {
     <p>Weight: ${data.weight}kg</p>
     </div>
     `
+
+   
+
     if (data.weight >= 80 && data.weight <= 120){
       big.classList.add('show_poke_masseg');
     } else if(data.weight >= 121 && data.weight <= 500){

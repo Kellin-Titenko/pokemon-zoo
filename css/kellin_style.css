@@ -1083,7 +1083,7 @@ div[class^='magic-dust']{
 
 /**________________________poke_ball_game________________________**/
 .poke_ball_pic{
-  background: url('../img/small_poke_ball.png') no-repeat center;
+ background: url('../img/small_poke_ball.png') no-repeat center;
 }
 .poke_ball_background{
   background-color: #D7D7D7;

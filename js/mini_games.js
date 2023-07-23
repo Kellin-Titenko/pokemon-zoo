@@ -25,6 +25,7 @@ function fun_clik_pokemon3() {
 function game_clik(e) {
     console.log(e.target.id);
     the_game_to_show = e.target.id;
+    window.location.href = "the_mini_game.html";
 }
 
 button_info.addEventListener("click", fun_clik_pokemon1);
