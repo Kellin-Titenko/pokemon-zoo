@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-------multi screen scalability meta viewport and jquery links------>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+<script src="http://code.jquery.com/jquery-1.7.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="script.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://cdn.rawgit.com/harvesthq/chosen/gh-pages/chosen.jquery.min.js"></script>
+<link href="https://cdn.rawgit.com/harvesthq/chosen/gh-pages/chosen.min.css" rel="stylesheet" />
+<link rel="stylesheet" href="./css/contact.css">
+    <title>Document</title>
+</head>
+<body>
+
+
+  <!-----------Login Form------------->
+  <div class="top_bar">
+  <nav>
+    <div class="text_element nav_bar_title z-text"><a id="logo" href="mainNir.html">Team Rocket Zoo</a>
+    </div>
+    <ul class="nav_bar_buttns_contenir">
+        <li class= "z-text"><a href="./info.html">info</a></li>
+        <li class="z-text"><a href="./pokemon_kellin.html">Pokemons</a></li>
+        <li class="z-text"><a href="./mini_games.html">Mini games</a></li>
+        <li class="z-text"><a href="./Contact-payment.html">Join us!</a></li>
+        <li class="z-text"><a href="#">Pica bot</a></li>
+    </ul>
+  </nav>
+</div>
+  <div class="Container1">
+    <form1 class="login_details" onsubmit="return login_validation()">
+      <div class="Login_form">
+        Team Login
+      </div>
+      <div class="input_box">
+  
+        <!---Username and Password Fields--->
+        <div class="input-icons">
+          <i class="fa fa-user fa-lg icon"></i>
+          <div class="input-field">
+            <input id="username" name="UserName" type="text" placeholder="Email" required>
+            <div class="form-group ml-5 mr-5 icon-div">
+              <i class="fa fa-lock fa-lg icon"></i>
+              <input id="txtpassword" type="password" name="Password" id="#txtPassword" placeholder="Password" required>
+              <i class="fa fa-fw fa-eye field_icon" id="togglePassword"></i>
+            </div>
+          </div>
+        </div>
+        <!------Remember Me and submit------>
+        <input type="checkbox" value="lsRememberMe" id="rememberMe">
+        <label for="rememberMe">Remember me</label>
+        <input type="submit" value="Log in" onclick="lsRememberMe()">
+      </div>
+      <!----Registration form and Forgot password links---->
+      <div class="message">
+        <ul class="registerandreset">
+          <li class="toggleform">Not Registered? <a href="#">Register Now</a></li>
+          <li>|</li>
+          <li>Forgor Password? <a onclick="togglePopup()" id="forgot_password" href="#">Reset Here</a></li>
+        </ul>
+      </div>
+    </form1>
+    <div class="popup" id="popup-1">
+      <div class="overlay"></div>
+      <div class="content">
+        <div class="close-btn" onclick="togglePopup()">&times;</div>
+        <div class="rstpas">
+          <h2>Reset Password</h2>
+        </div>
+        <div class="email">
+          <div class=input-icons>
+            <i class="fa fa-user icon"></i>
+          </div>
+          <input id="rstmail" name="rstemail" type="text" placeholder="Email" required>
+        </div>
+        <input type="submit" name="submit" />
+      </div>
+      <!------Registration Form--------->
+      <form1 class="register_form visible" onsubmit="return register_validation()">
+        <div class="Faculty_Registration">
+          <div class="Reg_form">
+            Rocket team Registration
+          </div>
+          <!----Faculty's personal details---->
+          <div class="Pers_details">
+            <div id="name">
+              <div class="input-icons">
+                <!------Salutation or Title--------->
+                <select id="salutation" value="Title" required>
+                  <option value="0" selected="selected">Title</option>
+                  <option value="Mr.">Mr.</option>
+                  <option value="Mrs.">Mrs.</option>
+                  <option value="Miss.">Ms.</option>
+                  <option value="Prof.">Prof.</option>
+                  <option value="Dr.">Dr.</option>
+                </select>
+                <!-----First name and last name----->
+                <i aria-hidden="true" class="fa fa-user fa-lg icon"></i>
+                <input type="text" name="firname" id="firstnam" placeholder="First Name" required>
+                <i aria-hidden="true" class="fa fa-user fa-lg icon"></i>
+                <input type="text" name="lasname" id="lastnam" placeholder="Last Name" required>
+              </div>
+            </div>
+            <!-----------Phone Number----------->
+            <div class="input-icons">
+              <div class="input-field"><span><i aria-hidden="true" class="fa fa-phone fa-lg icon"></i></span>
+                <input type="tel" id="phone" name="phone" data-minlength="13" maxlength="13" placeholder="Phone Number" required>
+              </div>
+              <!-------------Email ID------------->
+              <div class="input-field"> <span><i aria-hidden="true" class="fa fa-envelope fa-lg icon"></i></span>
+                <input type="email" name="email" id="email" placeholder="Email" required>
+              </div>
+              <!-------Create Password------------>
+              <div class="input-field">
+                <div class="form-group ml-5 mr-5 icon-div">
+                  <i aria-hidden="true" class="fa fa-lock fa-lg icon"></i>
+                  <input type="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" name="newpassword" id="newpassword" placeholder="Create Password" required>
+                  <i class="fa fa-fw fa-eye icon" id="toggleP"></i>
+                </div>
+              </div>
+              <!----Password Requirements Box----->
+              <div id="password_info">
+                <h4>Password must meet the following requirements:</h4>
+                <ul>
+                  <li id="number" class="invalid">At least <b>one number</b></li>
+                  <li id="small" class="invalid">At least <b>one lowercase letter</b></li>
+                  <li id="capital" class="invalid">At least <b>one uppercase letter</b></li>
+                  <li id="length" class="invalid">Be at least <b>8 characters</b></li>
+                </ul>
+              </div>
+              <!--------Confirm Password---------->
+              <div class="input-field">
+                <div class="form-group ml-5 mr-5 icon-div">
+                  <i aria-hidden="true" class="fa fa-lock fa-lg icon"></i>
+                  <input type="password" name="confirm_password" id="confirm_password" placeholder="Confirm Password" required>
+                  <i class="fa fa-fw fa-eye icon" id="togglePass"></i>
+                </div>
+              </div>
+              <!-----Check if Create Password and confirm password fields match------->
+              <div class="registrationFormAlert" id="CheckPasswordMatch">
+              </div>
+            </div>
+            <!----------Date of Birth----------->
+            <div class="DOB_field">
+              <div class="labelofdob">
+                <label for="DOB">Date of Birth: </label>
+              </div>
+              <div class="dob">
+                <input type="date" id="datepicker" name"dob" />
+              </div>
+            </div>
+          </div>
+          <!-------Professional Details------->
+          <div class="depsemsub">
+            <!-----------Department--------------->
+            <div class="dep">
+              <form action="http://httpbin.org/post" method="post">
+                <select data-placeholder="Vistors" name="dept" multiple class="chosen-select" required>
+                  <option value=""></option>
+                  <option value="EE">Electronics Engineering</option>
+                  <option value="ENC">Electronics and Communication</option>
+                  <option value="CST">Computer Science and Technology</option>
+                  <option value="IT">Information Technology</option>
+                  <option value="DS">Data Science</option>
+                  <option value="CE">Computer Engineering</option>
+                </select>
+              </form>
+            </div>
+            <!-----------Semester--------------->
+            <div class="sem">
+              <form action="http://httpbin.org/post" method="post">
+                <select data-placeholder="Pokemon Mastery Exprience" multiple class="chosen-select" name="sem" style="width: 195px;" required>
+                  <option value=""></option>
+                  <option value="1st">First Level</option>
+                  <option value="2nd">Second Level</option>
+                  <option value="3rd">Third Level</option>
+                  <option value="4th">Fourth Level</option>
+                  <option value="5th">Fifth Level</option>
+                  <option value="6th">Sixth Level</option>
+                  <option value="7th">Seventh Level</option>
+                  <option value="8th">Eighth Level</option>
+                </select>
+              </form>
+            </div>
+            <!-----------Subjects taught------------->
+            <div class="sub">
+              <form action="http://httpbin.org/post" method="post">
+                <select data-placeholder="Purchace Menu" multiple class="chosen-select" name="subjects-taught" required>
+                  <option value=""></option>
+                  <!-----------4th Year Subjects----------->
+                  <option"1">Major Project</option>
+                    <option value="2">Management for Information and Communication Professional</option>
+                    <option value="3">HD Languages</option>
+                    <option value="4">Wireless and Mobile Communication</option>
+                    <option value="5">Robotics</option>
+                    <option value="6">Telecom Network Management</option>
+                    <option value="7">VLSI Technology</option>
+                    <option value="8">Electronics Warfare System</option>
+                    <option value="9">Speech Processing</option>
+                    <option value="10">Accounting and Finance Management</option>
+                    <option value="11">Renewable Energy Sources</option>
+                    <option value="12">RF Circuit Design</option>
+                    <option value="13">Advanced Electronics and Instrumentation</option>
+                    <option value="14">Cryptography Coding Techniques</option>
+                    <option value="15">Cryptography Coding Techniques Lab</option>
+                    <option value="16">Image Processing</option>
+                    <option value="17">Wireless Network</option>
+                    <option value="18">Wireless Network Lab</option>
+                    <option value="19">Computer and Communication Network</option>
+                    <option value="20">Communication Networks Lab</option>
+                    <option value="21">Fibre Optics Communication</option>
+                    <option value="22">Mobile Communication</option>
+                    <option value="23">Fibre Optics Communication Lab</option>
+                    <option value="24">Mobile Communication Lab</option>
+                    <option value="25">Embedded and IoT System</option>
+                    <option value="26">Mechatronics</option>
+                    <option value="27">Consumer Electronics</option>
+                    <option value="28">VLSI Design</option>
+                    <option value="29">Embedded and IoT System Lab</option>
+                    <option value="30">Mechatronics Lab</option>
+                    <option value="31">Consumer Electronics Lab</option>
+                    <option value="32">VLSI Design Lab</option>
+                    <option value="33">Deep Learning</option>
+                    <option value="34">Deep Learning Lab</option>
+                    <option value="35">Advanced Databases</option>
+                    <option value="36">Advanced Databases Lab</option>
+                    <option value="37">Advanced Operating System and System Program</option>
+                    <option value="38">Data Science Business Analytics</option>
+                    <option value="39">Construction Compiler</option>
+                    <option value="40">Construction Compiler Lab</option>
+  
+                    <!-----------3rd Year Subjects----------->
+                    <option value="41">Microprocessor-II</option>
+                    <option value="42">Automotive Electronics</option>
+                    <option value="43">Digital Signal Processing and Applications</option>
+                    <option value="44">Industrial Electronics</option>
+                    <option value="45">Digital Communication</option>
+                    <option value="46">Microwave Enginering</option>
+                    <option value="47">Radar Engineering</option>
+                    <option value="48">Microwave and Antenna Lab</option>
+                    <option value="49">Radar Engineering Lab</option>
+                    <option value="50">Microprocessor-II Lab</option>
+                    <option value="51">Automotive Electronics Lab</option>
+                    <option value="52">Digital Signal Processing Lab</option>
+                    <option value="53">Power Electronics Lab</option>
+                    <option value="54">Digital Communication Lab</option>
+                    <option value="55">Seminar</option>
+                    <option value="56">Microprocessor-I</option>
+                    <option value="57">Filter Theory</option>
+                    <option value="58">Antenna Theory</option>
+                    <option value="59">Control System</option>
+                    <option value="60">Communication Skills-II</option>
+                    <option value="61">Effective Technical Communication</option>
+                    <option value="62">Effective Technical Communication Lab</option>
+                    <option value="63">Analog and Digital Communication</option>
+                    <option value="64">Analog and Digital Communication Lab</option>
+                    <option value="65">Speech and Audio Processing</option>
+                    <option value="66">Speech and Audio Processing Lab</option>
+                    <option value="67">Electronic Measurements and Insteuments Lab</option>
+                    <option value="68">Principles of Communication</option>
+                    <option value="69">Microprocessor-I Lab</option>
+                    <option value="70">Principles of Communication Lab</option>
+                    <option value="71">Filter Theory Lab</option>
+                    <option value="72">Control System Lab</option>
+                    <option value="73">DataBase Management System</option>
+                    <option value="74">DataBase Management System Lab</option>
+                    <option value="75">Digital Image and Video Processing</option>
+                    <option value="76">Digital Image and Video Processing Lab</option>
+                    <option value="77">Essence of Indian Knowledge and Tradition</option>
+                    <option value="78">Object Oriented Programming</option>
+                    <option value="79">Object Oriented Programming Lab</option>
+                    <option value="80">Software Engineering</option>
+                    <option value="81">Software Engineering Lab</option>
+                    <option value="82">Finite Language and Automata Theory</option>
+                    <option value="83">Finite Language and Automata Theory Lab</option>
+                    <option value="84">Signals & System Lab</option>
+  
+                    <!-----------2nd Year Subjects----------->
+                    <option value="85">Electromagnetic Waves</option>
+                    <option value="86">Probability Theory and Stochastic Processes</option>
+                    <option value="87">Microcontrollers</option>
+                    <option value="88">Analog Circuits</option>
+                    <option value="89">Network Theory</option>
+                    <option value="90">Opening Systems</option>
+                    <option value="91">Design & Analysis of Algorithms</option>
+                    <option value="92">Computer Organization & Architecture</option>
+                    <option value="93">Management-I (Finance & Accounting)</option>
+                    <option value="94">Discrete Mathematics</option>
+                    <option value="95">Electronic Devices</option>
+                    <option value="96">Digital System Design</option>
+                    <option value="97">Signals & Systems</option>
+                    <option value="98">Applied Mathematics</option>
+                    <option value="99">Computer Architecture</option>
+                    <option value="100">Economics for Engineer</option>
+                    <option value="101">Analog Electronic Circuits</option>
+                    <option value="102">Data Structure & Algorithms</option>
+                    <option value="103">Digital Electronics</option>
+                    <option value="104">Mathematics-III (Probability and Statistics)</option>
+                    <option value="105">Data Structure & Algorithms Lab</option>
+                    <option value="106">Analog Electronic Circuits Lab</option>
+                    <option value="107">Electronic Devices Lab</option>
+                    <option value="108">Digital System Design Lab</option>
+                    <option value="109">Data Structure Lab</option>
+                    <option value="110">IT Workshop</option>
+                    <option value="111">Constitution of India</option>
+                    <option value="112">Digital Electronics Lab</option>
+                    <option value="113">Analog Circuit Lab</option>
+                    <option value="114">Analog and Digital Circuit</option>
+                    <option value="115">Analog and Digital Circuit Lab</option>
+                    <option value="116">Introduction to Data Science</option>
+                    <option value="117">Introduction to Data Science Lab</option>
+  
+                    <!-----------1st Year Subjects----------->
+                    <option value="118">Applied Science (Physics & Chemistry)</option>
+                    <option value="119">Mathematics-II</option>
+                    <option value="120">Programming for Problem Solving</option>
+                    <option value="121">Workshop/ Manufacturing Practices</option>
+                    <option value="122">English</option>
+                    <option value="123">Applied Science</option>
+                    <option value="124">Mathematics-I</option>
+                    <option value="125">Basic Electrical Engineering</option>
+                    <option value="126">Engineering Graphics and Design</option>
+                </select>
+              </form>
+            </div>
+          </div>
+          <!---------Declaration and Notification check----------->
+          <div class="select_arrow"></div>
+          <div class="input_field checkbox_option">
+            <input type="checkbox" id="cb1" required />
+            <label for="cb1">Information provided is true to the best of my knowledge</label>
+          </div>
+          <div class="input_field checkbox_option">
+            <input type="checkbox" id="cb2" required />
+            <label for="cb2">I want to receive alert notifications</label>
+          </div>
+          <!-----------Submit Registration----------->
+          <input class="button" type="submit" value="Register" />
+        </div>
+        <!-----------login form link----------->
+        <div class"message">
+          <p class="toggleform">Already Registered? <a href="#">Click here to Login</a></p>
+        </div>
+    </div>
+    </form1>
+    <!---------------------------------------------->
+    <script src="./js/contact.js"></script>
+</body>
+</html>
+
